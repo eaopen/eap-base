@@ -8,7 +8,7 @@
     <version>${revision}</version>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
-    <description>openEAP项目基础脚手架</description>
+    <description>openEAP项目基础脚手架（综合版）</description>
 
     <properties>
         <revision>2.2.0</revision>
@@ -46,23 +46,33 @@
     </dependencyManagement>
 
     <distributionManagement>
-        <repository>
+        <snapshotRepository>
             <id>github-mvn-openea</id>
             <name>github-openea</name>
             <url>https://maven.pkg.github.com/eaopen/mvn-repo</url>
-        </repository>
+        </snapshotRepository>
+<!--        <repository>-->
+<!--            <id>github-mvn-openea</id>-->
+<!--            <name>github-openea</name>-->
+<!--            <url>https://maven.pkg.github.com/eaopen/mvn-repo</url>-->
+<!--        </repository>-->
 <!--        <snapshotRepository>-->
 <!--            <id>ossrh</id>-->
 <!--            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>-->
 <!--        </snapshotRepository>-->
-<!--        <repository>-->
-<!--            <id>ossrh</id>-->
-<!--            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>-->
-<!--        </repository>-->
+        <repository>
+            <id>ossrh</id>
+            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
     </distributionManagement>
 
     <!-- 使用 aliyun 的 Maven 源，提升下载速度 -->
     <repositories>
+        <repository>
+            <id>aliyunmaven</id>
+            <name>aliyun</name>
+            <url>https://maven.aliyun.com/repository/public</url>
+        </repository>
         <repository>
             <id>github-mvn-openea</id>
             <name>github-openea</name>
@@ -74,11 +84,6 @@
                 <enabled>true</enabled>
                 <updatePolicy>always</updatePolicy>
             </snapshots>
-        </repository>
-        <repository>
-            <id>aliyunmaven</id>
-            <name>aliyun</name>
-            <url>https://maven.aliyun.com/repository/public</url>
         </repository>
         <repository>
             <id>openea-reps-mvn</id>

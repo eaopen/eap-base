@@ -12,7 +12,7 @@
     <packaging>jar</packaging>
 
     <name>${project.artifactId}</name>
-    <description>数据库连接池、多数据源、事务、MyBatis 拓展</description>
+    <description>数据库连接池、多数据源、事务、MyBatis 拓展，集成扩展extj数据库工具</description>
     <url>https://github.com/eaopen/openea-eap</url>
 
     <dependencies>

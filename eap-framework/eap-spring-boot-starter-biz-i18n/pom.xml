@@ -13,7 +13,7 @@
 
     <name>${project.artifactId}</name>
     <description>
-        i18n
+        国际化i18n及翻译
     </description>
     <url>https://github.com/eaopen/openea-eap</url>
 

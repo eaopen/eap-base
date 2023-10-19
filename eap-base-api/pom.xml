@@ -17,7 +17,7 @@
 
     <name>${project.artifactId}</name>
     <description>
-        base api
+        基础框架依赖api，包含eap-module-system-api和eap-module-infra-api
     </description>
 
 </project>
