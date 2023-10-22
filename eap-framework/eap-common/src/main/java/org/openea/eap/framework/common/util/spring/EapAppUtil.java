@@ -45,7 +45,6 @@ public class EapAppUtil
      *
      * @param beanId
      * @return Object
-     * @throws
      * @since 1.0.0
      */
     public static Object getBean(String beanId) {
@@ -62,7 +61,6 @@ public class EapAppUtil
      *
      * @param beanClass
      * @return T
-     * @throws
      * @since 1.0.0
      */
     public static <T> T getBean(Class<T> beanClass) {

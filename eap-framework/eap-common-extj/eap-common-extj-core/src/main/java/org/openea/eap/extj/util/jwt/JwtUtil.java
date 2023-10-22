@@ -13,8 +13,8 @@ public class JwtUtil {
 
     /**
      * 获取jwt中的携带的Redis的token
-     * @param token
-     * @return
+     * @param token redis中token
+     * @return token
      */
     public static String getRealToken(String token) {
         String realToken;
@@ -30,8 +30,8 @@ public class JwtUtil {
 
     /**
      * 获取jwt中的携带的Redis的token
-     * @param token
-     * @return
+     * @param token redis中token
+     * @return true/false
      */
     public static Integer getSingleLogin(String token) {
         int singleLogin = 1;

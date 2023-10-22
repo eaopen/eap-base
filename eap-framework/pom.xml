@@ -35,7 +35,7 @@
         <module>eap-spring-boot-starter-biz-sms</module>
 
         <module>eap-spring-boot-starter-biz-pay</module>
-        <module>eap-spring-boot-starter-biz-weixin</module>
+<!--        <module>eap-spring-boot-starter-biz-weixin</module>-->
         <module>eap-spring-boot-starter-biz-social</module>
         <module>eap-spring-boot-starter-biz-tenant</module>
         <module>eap-spring-boot-starter-biz-data-permission</module>

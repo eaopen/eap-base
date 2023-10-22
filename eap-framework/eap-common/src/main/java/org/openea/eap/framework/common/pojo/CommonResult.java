@@ -22,7 +22,7 @@ public class CommonResult<T> implements Serializable {
     /**
      * 错误码
      *
-     * @see ErrorCode#getCode()
+     * see ErrorCode#getCode()
      */
     private Integer code;
     /**
@@ -32,7 +32,6 @@ public class CommonResult<T> implements Serializable {
     /**
      * 错误提示，用户可阅读
      *
-     * @see ErrorCode#getMsg() ()
      */
     private String msg;
 

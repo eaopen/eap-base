@@ -30,7 +30,7 @@ public class DateUtils {
      * 将 LocalDateTime 转换成 Date
      *
      * @param date LocalDateTime
-     * @return LocalDateTime
+     * @return Date
      */
     public static Date of(LocalDateTime date) {
         // 将此日期时间与时区相结合以创建 ZonedDateTime
@@ -131,7 +131,8 @@ public class DateUtils {
     /**
      * 计算当期时间相差的日期
      *
-     * @param field  日历字段.<br/>eg:Calendar.MONTH,Calendar.DAY_OF_MONTH,<br/>Calendar.HOUR_OF_DAY等.
+     * @param field  日历字段.
+     *               eg:Calendar.MONTH,Calendar.DAY_OF_MONTH,Calendar.HOUR_OF_DAY等.
      * @param amount 相差的数值
      * @return 计算后的日志
      */
