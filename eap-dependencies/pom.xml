@@ -14,7 +14,7 @@
     <url>https://github.com/eaopen/eap-base</url>
 
     <properties>
-        <revision>2.2.0</revision>
+        <revision>2.3.0-SNAPSHOT</revision>
         <!-- 统一依赖管理 -->
         <spring.boot.version>2.7.16</spring.boot.version>
 
@@ -1046,19 +1046,14 @@
 
     <distributionManagement>
         <snapshotRepository>
-            <id>github-mvn-openea</id>
-            <name>github-openea</name>
-            <url>https://maven.pkg.github.com/eaopen/mvn-repo</url>
+            <id>openea-reps-mvn</id>
+            <name>mvn</name>
+            <url>https://openea-maven.pkg.coding.net/repository/reps/mvn/</url>
         </snapshotRepository>
-        <!--        <repository>-->
-        <!--            <id>github-mvn-openea</id>-->
-        <!--            <name>github-openea</name>-->
-        <!--            <url>https://maven.pkg.github.com/eaopen/mvn-repo</url>-->
-        <!--        </repository>-->
-        <!--        <snapshotRepository>-->
-        <!--            <id>ossrh</id>-->
-        <!--            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>-->
-        <!--        </snapshotRepository>-->
+<!--        <snapshotRepository>-->
+<!--            <id>ossrh</id>-->
+<!--            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>-->
+<!--        </snapshotRepository>-->
         <repository>
             <id>ossrh</id>
             <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
