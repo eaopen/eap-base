@@ -1,1 +1,3 @@
-org.openea.eap.framework.mq.config.EapMQAutoConfiguration
+org.openea.eap.framework.mq.redis.config.EapRedisMQProducerAutoConfiguration
+org.openea.eap.framework.mq.redis.config.EapRedisMQConsumerAutoConfiguration
+org.openea.eap.framework.mq.rabbitmq.config.EapRabbitMQAutoConfiguration

@@ -1,7 +1,7 @@
 package org.openea.eap.framework.quartz.config;
 
-import lombok.extern.slf4j.Slf4j;
 import org.openea.eap.framework.quartz.core.scheduler.SchedulerManager;
+import lombok.extern.slf4j.Slf4j;
 import org.quartz.Scheduler;
 import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.context.annotation.Bean;

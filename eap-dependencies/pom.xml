@@ -9,122 +9,77 @@
     <version>${revision}</version>
     <packaging>pom</packaging>
 
-    <name>eap-dependencies</name>
+    <name>${project.artifactId}</name>
     <description>基础 bom 文件，管理整个项目的依赖版本</description>
-    <url>https://github.com/eaopen/eap-base</url>
+    <url>https://github.com/YunaiV/ruoyi-vue-pro</url>
 
     <properties>
-        <revision>2.3.0-SNAPSHOT</revision>
+        <revision>2.0.0-jdk8-snapshot</revision>
+        <flatten-maven-plugin.version>1.5.0</flatten-maven-plugin.version>
         <!-- 统一依赖管理 -->
-        <spring.boot.version>2.7.16</spring.boot.version>
-
+        <spring.boot.version>2.7.17</spring.boot.version>
         <!-- Web 相关 -->
-        <servlet.versoin>2.5</servlet.versoin>
-        <swagger.version>2.2.8</swagger.version>
-        <swagger-model.version>2.2.8</swagger-model.version>
-        <swagger-ui.version>1.9.6</swagger-ui.version>
-        <swagger-annotations.version>1.6.11</swagger-annotations.version>
         <springdoc.version>1.6.15</springdoc.version>
-        <knife4j.version>4.1.0</knife4j.version>
-        <nimbus-jose-jwt.version>9.22</nimbus-jose-jwt.version>
-
+        <knife4j.version>4.3.0</knife4j.version>
+        <servlet.versoin>2.5</servlet.versoin>
         <!-- DB 相关 -->
-        <druid.version>1.2.18</druid.version>
-        <mybatis-plus.version>3.5.3.1</mybatis-plus.version>
-        <mybatis-plus-generator.version>3.5.3.1</mybatis-plus-generator.version>
-        <mybatis-plus-generator34.version>3.4.1</mybatis-plus-generator34.version>
+        <druid.version>1.2.20</druid.version>
+        <mybatis-plus.version>3.5.4</mybatis-plus.version>
+        <mybatis-plus-generator.version>3.5.4</mybatis-plus-generator.version>
         <dynamic-datasource.version>3.6.1</dynamic-datasource.version>
-        <mybatis-plus-join-boot-starter.version>1.4.5</mybatis-plus-join-boot-starter.version>
-        <mybatis-dynamic-sql.version>1.5.0</mybatis-dynamic-sql.version>
+        <mybatis-plus-join.version>1.4.7</mybatis-plus-join.version>
         <redisson.version>3.18.0</redisson.version>
-        <pagehelper.version>5.3.2</pagehelper.version>
-        <mysql.version>8.0.29</mysql.version>
-        <oracle.version>21.9.0.0</oracle.version>
-        <kingbase.version>2.0</kingbase.version>
-        <postgre.version>42.6.0</postgre.version>
-        <sqlserver.version>11.2.1.jre8</sqlserver.version>
-        <dm18.version>1.8.0</dm18.version>
-        <dm8.jdbc.version>8.1.2.141</dm8.jdbc.version>
-
-
+        <dm8.jdbc.version>8.1.3.62</dm8.jdbc.version>
+        <!-- 消息队列 -->
+        <rocketmq-spring.version>2.2.3</rocketmq-spring.version>
         <!-- 服务保障相关 -->
-        <lock4j.version>2.2.3</lock4j.version>
+        <lock4j.version>2.2.5</lock4j.version>
         <resilience4j.version>1.7.1</resilience4j.version>
         <!-- 监控相关 -->
         <skywalking.version>8.12.0</skywalking.version>
-        <spring-boot-admin.version>2.7.10</spring-boot-admin.version>
+        <spring-boot-admin.version>2.7.11</spring-boot-admin.version>
         <opentracing.version>0.33.0</opentracing.version>
         <!-- Test 测试相关 -->
         <podam.version>7.2.11.RELEASE</podam.version>
         <jedis-mock.version>1.0.7</jedis-mock.version>
         <mockito-inline.version>4.11.0</mockito-inline.version>
         <!-- Bpm 工作流相关 -->
-        <openbpm.version>3.5.2</openbpm.version>
-        <openbpm-webjar.version>3-dev</openbpm-webjar.version>
         <flowable.version>6.8.0</flowable.version>
         <!-- 工具类相关 -->
-        <captcha-plus.version>1.0.6</captcha-plus.version>
-        <jsoup.version>1.15.4</jsoup.version>
-        <lombok.version>1.18.28</lombok.version>
+        <captcha-plus.version>1.0.10</captcha-plus.version>
+        <jsoup.version>1.16.2</jsoup.version>
+        <lombok.version>1.18.30</lombok.version>
         <mapstruct.version>1.5.5.Final</mapstruct.version>
-        <hutool.version>5.8.20</hutool.version>
-        <javax-mail.version>1.6.2</javax-mail.version>
+        <hutool.version>5.8.22</hutool.version>
         <easyexcel.verion>3.3.2</easyexcel.verion>
-        <poi.version>4.1.2</poi.version>
-        <easypoi-base.version>4.4.0</easypoi-base.version>
         <velocity.version>2.3</velocity.version>
         <screw.version>1.0.5</screw.version>
         <fastjson.version>1.2.83</fastjson.version>
-        <guava.version>32.0.1-jre</guava.version>
+        <guava.version>32.1.3-jre</guava.version>
         <guice.version>5.1.0</guice.version>
         <transmittable-thread-local.version>2.14.2</transmittable-thread-local.version>
-        <commons-net.version>3.9.0</commons-net.version>
+        <commons-net.version>3.10.0</commons-net.version>
         <jsch.version>0.1.55</jsch.version>
         <tika-core.version>2.7.0</tika-core.version>
-        <netty-all.version>4.1.90.Final</netty-all.version>
         <ip2region.version>2.7.0</ip2region.version>
-        <yitter-idgenerator.version>1.0.6</yitter-idgenerator.version>
-        <commons-fileupload.version>1.5</commons-fileupload.version>
-        <sa-token.version>1.31.0</sa-token.version>
         <!-- 三方云服务相关 -->
-        <okio.version>3.4.0</okio.version>
-        <okhttp3.version>4.10.0</okhttp3.version>
+        <okio.version>3.5.0</okio.version>
+        <okhttp3.version>4.11.0</okhttp3.version>
         <commons-io.version>2.11.0</commons-io.version>
-        <minio.version>8.5.4</minio.version>
-        <dingtalk.verssion>1.0</dingtalk.verssion>
-        <aliyun-java-sdk-core.version>4.6.3</aliyun-java-sdk-core.version>
+        <minio.version>8.5.6</minio.version>
+        <aliyun-java-sdk-core.version>4.6.4</aliyun-java-sdk-core.version>
         <aliyun-java-sdk-dysmsapi.version>2.2.1</aliyun-java-sdk-dysmsapi.version>
-        <dysmsapi.version>2.0.8</dysmsapi.version>
-        <tencentcloud-sdk-java.version>3.1.758</tencentcloud-sdk-java.version>
-        <justauth.version>1.0.1</justauth.version>
-        <jimureport.version>1.5.8</jimureport.version>
+        <tencentcloud-sdk-java.version>3.1.880</tencentcloud-sdk-java.version>
+        <justauth.version>1.0.8</justauth.version>
+        <jimureport.version>1.6.1</jimureport.version>
         <xercesImpl.version>2.12.2</xercesImpl.version>
-        <weixin-java.version>4.5.0</weixin-java.version>
-        <sardine.version>5.10</sardine.version>
-
+        <weixin-java.version>4.5.7.B</weixin-java.version>
+        <ureport2.version>2.2.9</ureport2.version>
     </properties>
-
-    <licenses>
-        <license>
-            <name>The Apache Software License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-        </license>
-    </licenses>
-    <scm>
-        <url>https://github.com/eaopen/openea-eap</url>
-        <connection>https://github.com/eaopen/openea-eap.git</connection>
-        <developerConnection>https://github.com/eaopen</developerConnection>
-    </scm>
-    <developers>
-        <developer>
-            <name>openea</name>
-            <url>https://github.com/eaopen</url>
-        </developer>
-    </developers>
 
     <dependencyManagement>
         <dependencies>
-            <!-- boot依赖管理 -->
+            <!-- 统一依赖管理 -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
@@ -146,24 +101,17 @@
             </dependency>
             <dependency>
                 <groupId>io.github.eaopen</groupId>
-                <artifactId>eap-spring-boot-starter-biz-trade</artifactId>
-                <version>${revision}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.github.eaopen</groupId>
                 <artifactId>eap-spring-boot-starter-biz-dict</artifactId>
                 <version>${revision}</version>
             </dependency>
-
-            <dependency>
-                <groupId>io.github.eaopen</groupId>
-                <artifactId>eap-spring-boot-starter-biz-i18n</artifactId>
-                <version>${revision}</version>
-            </dependency>
-
             <dependency>
                 <groupId>io.github.eaopen</groupId>
                 <artifactId>eap-spring-boot-starter-biz-sms</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.eaopen</groupId>
+                <artifactId>eap-spring-boot-starter-biz-pay</artifactId>
                 <version>${revision}</version>
             </dependency>
             <dependency>
@@ -201,16 +149,6 @@
                 <artifactId>eap-spring-boot-starter-desensitize</artifactId>
                 <version>${revision}</version>
             </dependency>
-            <dependency>
-                <groupId>io.github.eaopen</groupId>
-                <artifactId>eap-spring-boot-starter-biz-pay</artifactId>
-                <version>${revision}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.github.eaopen</groupId>
-                <artifactId>eap-spring-boot-starter-biz-weixin</artifactId>
-                <version>${revision}</version>
-            </dependency>
 
             <!-- Spring 核心 -->
             <dependency>
@@ -233,65 +171,22 @@
                 <version>${revision}</version>
             </dependency>
 
-            <!-- 接口文档：使用最新版本的 Swagger 模型 -->
             <dependency>
-                <groupId>io.swagger.core.v3</groupId>
-                <artifactId>swagger-annotations</artifactId>
-                <version>${swagger.version}</version>
+                <groupId>io.github.eaopen</groupId>
+                <artifactId>eap-spring-boot-starter-websocket</artifactId>
+                <version>${revision}</version>
             </dependency>
-            <dependency>
-                <groupId>io.swagger.core.v3</groupId>
-                <artifactId>swagger-models</artifactId>
-                <version>${swagger.version}</version>
-            </dependency>
-
-            <!-- 兼容旧版 swagger-annotations 待优化 -->
-            <dependency>
-                <groupId>io.swagger</groupId>
-                <artifactId>swagger-annotations</artifactId>
-                <version>${swagger-annotations.version}</version>
-            </dependency>
-
-            <!-- 接口文档 UI：解决 knife4j 引入的 Spring Doc 版本太老 -->
-            <dependency>
-                <groupId>org.springdoc</groupId>
-                <artifactId>springdoc-openapi-common</artifactId>
-                <version>${springdoc.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springdoc</groupId>
-                <artifactId>springdoc-openapi-webmvc-core</artifactId>
-                <version>${springdoc.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springdoc</groupId>
-                <artifactId>springdoc-openapi-webflux-core</artifactId>
-                <version>${springdoc.version}</version>
-            </dependency>
-
-
-            <!-- 接口文档 UI：默认 -->
-            <dependency>
-                <groupId>org.springdoc</groupId>
-                <artifactId>springdoc-openapi-ui</artifactId>
-                <version>${springdoc.version}</version>
-            </dependency>
-
-            <!-- 接口文档 UI：knife4j -->
 
             <dependency>
                 <groupId>com.github.xiaoymin</groupId>
                 <artifactId>knife4j-openapi3-spring-boot-starter</artifactId>
                 <version>${knife4j.version}</version>
             </dependency>
-
-            <!-- 接口文档 UI：knife4j【网关专属】 -->
             <dependency>
-                <groupId>com.github.xiaoymin</groupId>
-                <artifactId>knife4j-gateway-spring-boot-starter</artifactId>
-                <version>${knife4j.version}</version>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-ui</artifactId>
+                <version>${springdoc.version}</version>
             </dependency>
-
 
             <!-- DB 相关 -->
             <dependency>
@@ -310,84 +205,21 @@
                 <artifactId>mybatis-plus-boot-starter</artifactId>
                 <version>${mybatis-plus.version}</version>
             </dependency>
-
             <dependency>
                 <groupId>com.baomidou</groupId>
-                <artifactId>mybatis-plus-extension</artifactId>
-                <version>${mybatis-plus.version}</version>
+                <artifactId>mybatis-plus-generator</artifactId> <!-- 代码生成器，使用它解析表结构 -->
+                <version>${mybatis-plus-generator.version}</version>
             </dependency>
-
-            <dependency>
-                <groupId>com.baomidou</groupId>
-                <artifactId>mybatis-plus-annotation</artifactId>
-                <version>${mybatis-plus.version}</version>
-            </dependency>
-
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>dynamic-datasource-spring-boot-starter</artifactId> <!-- 多数据源 -->
                 <version>${dynamic-datasource.version}</version>
             </dependency>
-
             <dependency>
                 <groupId>com.github.yulichang</groupId>
-                <artifactId>mybatis-plus-join-boot-starter</artifactId>
-                <version>${mybatis-plus-join-boot-starter.version}</version>
+                <artifactId>mybatis-plus-join-boot-starter</artifactId> <!-- MyBatis 联表查询 -->
+                <version>${mybatis-plus-join.version}</version>
             </dependency>
-
-            <dependency>
-                <groupId>org.mybatis.dynamic-sql</groupId>
-                <artifactId>mybatis-dynamic-sql</artifactId>
-                <version>${mybatis-dynamic-sql.version}</version>
-            </dependency>
-
-            <!-- 代码生成 -->
-            <dependency>
-                <groupId>com.baomidou</groupId>
-                <artifactId>mybatis-plus-generator</artifactId>
-                <version>${mybatis-plus-generator.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <artifactId>mybatis-plus-extension</artifactId>
-                        <groupId>com.baomidou</groupId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-
-            <!-- mysql -->
-            <dependency>
-                <groupId>mysql</groupId>
-                <artifactId>mysql-connector-java</artifactId>
-                <version>${mysql.version}</version>
-            </dependency>
-
-            <!-- Oracle-->
-            <dependency>
-                <groupId>com.oracle.database.jdbc</groupId>
-                <artifactId>ojdbc8</artifactId>
-                <version>${oracle.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.oracle.database.nls</groupId>
-                <artifactId>orai18n</artifactId>
-                <version>${oracle.version}</version>
-            </dependency>
-
-            <!--PostGre-->
-            <dependency>
-                <groupId>org.postgresql</groupId>
-                <artifactId>postgresql</artifactId>
-                <version>${postgre.version}</version>
-            </dependency>
-
-            <!--sqlserver-->
-            <dependency>
-                <groupId>com.microsoft.sqlserver</groupId>
-                <artifactId>mssql-jdbc</artifactId>
-                <version>${sqlserver.version}</version>
-            </dependency>
-
-
 
             <dependency>
                 <groupId>io.github.eaopen</groupId>
@@ -427,6 +259,12 @@
                 <version>${revision}</version>
             </dependency>
 
+            <dependency>
+                <groupId>org.apache.rocketmq</groupId>
+                <artifactId>rocketmq-spring-boot-starter</artifactId>
+                <version>${rocketmq-spring.version}</version>
+            </dependency>
+
             <!-- 服务保障相关 -->
             <dependency>
                 <groupId>io.github.eaopen</groupId>
@@ -454,11 +292,6 @@
             <dependency>
                 <groupId>io.github.resilience4j</groupId>
                 <artifactId>resilience4j-spring-boot2</artifactId>
-                <version>${resilience4j.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.github.resilience4j</groupId>
-                <artifactId>resilience4j-spring</artifactId>
                 <version>${resilience4j.version}</version>
             </dependency>
 
@@ -514,19 +347,17 @@
                 <groupId>de.codecentric</groupId>
                 <artifactId>spring-boot-admin-starter-server</artifactId> <!-- 实现 Spring Boot Admin Server 服务端 -->
                 <version>${spring-boot-admin.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>de.codecentric</groupId>
+                        <artifactId>spring-boot-admin-server-cloud</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
             <dependency>
                 <groupId>de.codecentric</groupId>
                 <artifactId>spring-boot-admin-starter-client</artifactId> <!-- 实现 Spring Boot Admin Server 服务端 -->
                 <version>${spring-boot-admin.version}</version>
-            </dependency>
-
-            <!-- Test 测试相关 -->
-            <dependency>
-                <groupId>io.github.eaopen</groupId>
-                <artifactId>eap-spring-boot-starter-test</artifactId>
-                <version>${revision}</version>
-                <scope>test</scope>
             </dependency>
 
             <dependency>
@@ -590,36 +421,6 @@
 
             <dependency>
                 <groupId>io.github.eaopen</groupId>
-                <artifactId>eap-extj-common</artifactId>
-                <version>${revision}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>io.github.eaopen</groupId>
-                <artifactId>eap-extj-provider</artifactId>
-                <version>${revision}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>io.github.eaopen</groupId>
-                <artifactId>eap-common-extj-core</artifactId>
-                <version>${revision}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>io.github.eaopen</groupId>
-                <artifactId>eap-common-extj-auth</artifactId>
-                <version>${revision}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>io.github.eaopen</groupId>
-                <artifactId>eap-common-extj-database</artifactId>
-                <version>${revision}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>io.github.eaopen</groupId>
                 <artifactId>eap-spring-boot-starter-excel</artifactId>
                 <version>${revision}</version>
             </dependency>
@@ -652,83 +453,16 @@
                 <version>${hutool.version}</version>
             </dependency>
 
-            <!-- excel工具 -->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>easyexcel</artifactId>
                 <version>${easyexcel.verion}</version>
             </dependency>
             <dependency>
-                <groupId>cn.afterturn</groupId>
-                <artifactId>easypoi-base</artifactId>
-                <version>${easypoi-base.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <artifactId>commons-compress</artifactId>
-                        <groupId>org.apache.commons</groupId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.poi</groupId>
-                <artifactId>poi</artifactId>
-                <version>${poi.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.poi</groupId>
-                <artifactId>poi-ooxml</artifactId>
-                <version>${poi.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.poi</groupId>
-                <artifactId>poi-ooxml-schemas</artifactId>
-                <version>${poi.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.nimbusds</groupId>
-                <artifactId>nimbus-jose-jwt</artifactId>
-                <version>${nimbus-jose-jwt.version}</version>
-            </dependency>
-
-            <!-- 雪花ID生成器 -->
-            <dependency>
-                <groupId>com.github.yitter</groupId>
-                <artifactId>yitter-idgenerator</artifactId>
-                <version>${yitter-idgenerator.version}</version>
-            </dependency>
-
-            <dependency>
                 <groupId>commons-io</groupId>
                 <artifactId>commons-io</artifactId>
                 <version>${commons-io.version}</version>
             </dependency>
-
-            <dependency>
-                <groupId>org.apache.commons</groupId>
-                <artifactId>commons-collections4</artifactId>
-                <version>4.4</version>
-            </dependency>
-
-            <!-- commons-text -->
-            <dependency>
-                <groupId>org.apache.commons</groupId>
-                <artifactId>commons-text</artifactId>
-                <version>1.10.0</version>
-            </dependency>
-
-            <dependency>
-                <groupId>commons-fileupload</groupId>
-                <artifactId>commons-fileupload</artifactId>
-                <version>${commons-fileupload.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.dom4j</groupId>
-                <artifactId>dom4j</artifactId>
-                <version>2.1.3</version>
-            </dependency>
-
             <dependency>
                 <groupId>org.apache.tika</groupId>
                 <artifactId>tika-core</artifactId> <!-- 文件类型的识别 -->
@@ -763,15 +497,6 @@
                 </exclusions>
             </dependency>
 
-
-            <!-- javax.mail => jakarta.mail -->
-            <dependency>
-                <groupId>com.sun.mail</groupId>
-                <artifactId>javax.mail</artifactId>
-                <version>${javax-mail.version}</version>
-            </dependency>
-
-
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
@@ -803,12 +528,6 @@
             </dependency>
 
             <dependency>
-                <groupId>io.netty</groupId>
-                <artifactId>netty-all</artifactId>
-                <version>${netty-all.version}</version>
-            </dependency>
-
-            <dependency>
                 <groupId>com.xingyuv</groupId>
                 <artifactId>spring-boot-starter-captcha-plus</artifactId>
                 <version>${captcha-plus.version}</version>
@@ -824,64 +543,6 @@
                 <groupId>org.jsoup</groupId>
                 <artifactId>jsoup</artifactId>
                 <version>${jsoup.version}</version>
-            </dependency>
-
-            <!--pagehelper分页插件-->
-            <dependency>
-                <groupId>com.github.pagehelper</groupId>
-                <artifactId>pagehelper</artifactId>
-                <version>${pagehelper.version}</version>
-            </dependency>
-
-
-            <!-- 第三方依赖 -->
-            <!-- 安全认证 -->
-            <dependency>
-                <groupId>cn.dev33</groupId>
-                <artifactId>sa-token-spring-boot-starter</artifactId>
-                <version>${sa-token.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>cn.dev33</groupId>
-                <artifactId>sa-token-jwt</artifactId>
-                <version>${sa-token.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>cn.hutool</groupId>
-                        <artifactId>hutool-jwt</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-            <dependency>
-                <groupId>cn.dev33</groupId>
-                <artifactId>sa-token-dao-redis-jackson</artifactId>
-                <version>${sa-token.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <artifactId>spring-boot-starter-data-redis</artifactId>
-                        <groupId>org.springframework.boot</groupId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-            <dependency>
-                <groupId>cn.dev33</groupId>
-                <artifactId>sa-token-core</artifactId>
-                <version>${sa-token.version}</version>
-            </dependency>
-
-
-            <!--二维码-->
-            <dependency>
-                <groupId>com.google.zxing</groupId>
-                <artifactId>core</artifactId>
-                <version>3.5.1</version>
-            </dependency>
-
-            <!-- 拼音 -->
-            <dependency>
-                <groupId>com.belerweb</groupId>
-                <artifactId>pinyin4j</artifactId>
-                <version>2.5.1</version>
             </dependency>
 
             <!-- 三方云服务相关 -->
@@ -906,33 +567,6 @@
                 <version>${minio.version}</version>
             </dependency>
 
-            <!-- WebDAV -->
-            <dependency>
-                <groupId>com.github.lookfirst</groupId>
-                <artifactId>sardine</artifactId>
-                <version>${sardine.version}</version>
-            </dependency>
-
-            <!--短信钉钉及企业微信-->
-            <!-- 钉钉API的Jar -->
-            <dependency>
-                <groupId>dingtalk-sdk-java</groupId>
-                <artifactId>taobao-sdk-java</artifactId>
-                <version>${dingtalk.verssion}</version>
-            </dependency>
-            <dependency>
-                <groupId>dingtalk-sdk-java</groupId>
-                <artifactId>taobao-sdk-java-source</artifactId>
-                <version>${dingtalk.verssion}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.tencentcloudapi</groupId>
-                <artifactId>tencentcloud-sdk-java</artifactId>
-                <version>${tencentcloud-sdk-java.version}</version>
-            </dependency>
-
-
             <!-- SMS SDK begin -->
             <dependency>
                 <groupId>com.aliyun</groupId>
@@ -949,18 +583,10 @@
                     </exclusion>
                 </exclusions>
             </dependency>
-
-            <!-- -->
             <dependency>
                 <groupId>com.aliyun</groupId>
                 <artifactId>aliyun-java-sdk-dysmsapi</artifactId>
                 <version>${aliyun-java-sdk-dysmsapi.version}</version>
-            </dependency>
-            <!-- 临时版本 -->
-            <dependency>
-                <groupId>com.aliyun</groupId>
-                <artifactId>dysmsapi20170525</artifactId>
-                <version>${dysmsapi.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.tencentcloudapi</groupId>
@@ -970,17 +596,15 @@
             <!-- SMS SDK end -->
 
             <dependency>
-                <groupId>com.aliyun</groupId>
-                <artifactId>alibaba-dingtalk-service-sdk</artifactId>
-                <version>${alibaba-dingtalk-service-sdk.version}</version>
-            </dependency>
-
-
-            <!-- 社交登陆（例如说，个人微信、企业微信等等） -->
-            <dependency>
                 <groupId>com.xingyuv</groupId>
-                <artifactId>spring-boot-starter-justauth</artifactId>
+                <artifactId>spring-boot-starter-justauth</artifactId> <!-- 社交登陆（例如说，个人微信、企业微信等等） -->
                 <version>${justauth.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>cn.hutool</groupId>
+                        <artifactId>hutool-core</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
@@ -990,20 +614,14 @@
             </dependency>
             <dependency>
                 <groupId>com.github.binarywang</groupId>
-                <artifactId>weixin-java-mp</artifactId>
+                <artifactId>wx-java-mp-spring-boot-starter</artifactId>
                 <version>${weixin-java.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.github.binarywang</groupId>
-                <artifactId>wx-java-mp-spring-boot-starter</artifactId>
+                <artifactId>wx-java-miniapp-spring-boot-starter</artifactId>
                 <version>${weixin-java.version}</version>
             </dependency>
-
-<!--            <dependency>-->
-<!--                <groupId>com.github.binarywang</groupId>-->
-<!--                <artifactId>wx-java-miniapp-spring-boot-starter</artifactId>-->
-<!--                <version>${wx-java-mp.version}</version>-->
-<!--            </dependency>-->
 
             <!-- 积木报表-->
             <dependency>
@@ -1022,114 +640,46 @@
                 <artifactId>xercesImpl</artifactId>
                 <version>${xercesImpl.version}</version>
             </dependency>
-            <!-- SpringBoot Websocket -->
+
+            <!-- UReport2 报表-->
             <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-websocket</artifactId>
-                <version>${spring.boot.version}</version>
+                <groupId>com.bstek.ureport</groupId>
+                <artifactId>ureport2-console</artifactId>
+                <version>${ureport2.version}</version>
             </dependency>
 
-            <dependency>
-                <groupId>org.owasp.antisamy</groupId>
-                <artifactId>antisamy</artifactId>
-                <exclusions>
-                    <exclusion>
-                        <artifactId>commons-io</artifactId>
-                        <groupId>commons-io</groupId>
-                    </exclusion>
-                </exclusions>
-                <version>1.7.3</version>
-            </dependency>
         </dependencies>
     </dependencyManagement>
 
-
-    <distributionManagement>
-        <snapshotRepository>
-            <id>openea-reps-mvn</id>
-            <name>mvn</name>
-            <url>https://openea-maven.pkg.coding.net/repository/reps/mvn/</url>
-        </snapshotRepository>
-<!--        <snapshotRepository>-->
-<!--            <id>ossrh</id>-->
-<!--            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>-->
-<!--        </snapshotRepository>-->
-        <repository>
-            <id>ossrh</id>
-            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-        </repository>
-    </distributionManagement>
-
     <build>
         <plugins>
-            <!-- 添加flatten-maven-plugin插件 -->
+            <!-- 统一 revision 版本 -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>flatten-maven-plugin</artifactId>
-                <version>1.5.0</version>
+                <version>${flatten-maven-plugin.version}</version>
+                <configuration>
+                    <flattenMode>resolveCiFriendliesOnly</flattenMode>
+                    <updatePomFile>true</updatePomFile>
+                </configuration>
                 <executions>
                     <execution>
-                        <id>flatten</id>
-                        <phase>process-resources</phase>
                         <goals>
                             <goal>flatten</goal>
                         </goals>
+                        <id>flatten</id>
+                        <phase>process-resources</phase>
                     </execution>
                     <execution>
-                        <id>flatten.clean</id>
-                        <phase>clean</phase>
                         <goals>
                             <goal>clean</goal>
                         </goals>
+                        <id>flatten.clean</id>
+                        <phase>clean</phase>
                     </execution>
                 </executions>
-                <inherited>true</inherited>
-                <configuration>
-                    <!-- 避免IDE将 .flattened-pom.xml 自动识别为功能模块 -->
-                    <updatePomFile>true</updatePomFile>
-                    <flattenMode>resolveCiFriendliesOnly</flattenMode>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-gpg-plugin</artifactId>
-                <version>1.6</version>
-                <executions>
-                    <execution>
-                        <id>sign-artifacts</id>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>sign</goal>
-                        </goals>
-                        <configuration>
-                            <keyname>CFE1227A</keyname>
-                            <passphraseServerId>CFE1227A</passphraseServerId>
-                            <gpgArguments>
-                                <arg>--pinentry-mode</arg>
-                                <arg>loopback</arg>
-                            </gpgArguments>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-deploy-plugin</artifactId>
-                <configuration>
-                    <skip>true</skip>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.sonatype.plugins</groupId>
-                <artifactId>nexus-staging-maven-plugin</artifactId>
-                <version>1.6.8</version>
-                <extensions>true</extensions>
-                <configuration>
-                    <serverId>ossrh</serverId>
-                    <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
-                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
-                </configuration>
             </plugin>
         </plugins>
     </build>
+
 </project>

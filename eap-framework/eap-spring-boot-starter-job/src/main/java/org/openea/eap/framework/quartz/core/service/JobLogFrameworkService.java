@@ -7,6 +7,7 @@ import java.time.LocalDateTime;
 /**
  * Job 日志 Framework Service 接口
  *
+ * @author 芋道源码
  */
 public interface JobLogFrameworkService {
 
@@ -39,5 +40,4 @@ public interface JobLogFrameworkService {
                                  @NotNull(message = "结束时间不能为空") LocalDateTime endTime,
                                  @NotNull(message = "运行时长不能为空") Integer duration,
                                  boolean success, String result);
-
 }

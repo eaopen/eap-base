@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Bean;
 /**
  * 文件配置类
  *
+ * @author 芋道源码
  */
 @AutoConfiguration
 public class EapFileAutoConfiguration {

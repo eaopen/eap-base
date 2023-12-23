@@ -3,6 +3,7 @@ package org.openea.eap.framework.captcha.core.enums;
 /**
  * 验证码 Redis Key 枚举类
  *
+ * @author 芋道源码
  */
 public interface CaptchaRedisKeyConstants {
 
@@ -23,4 +24,5 @@ public interface CaptchaRedisKeyConstants {
      * 过期时间：120 秒
      */
     String AJ_CAPTCHA_RUNNING = "RUNNING:CAPTCHA:%s";
+
 }

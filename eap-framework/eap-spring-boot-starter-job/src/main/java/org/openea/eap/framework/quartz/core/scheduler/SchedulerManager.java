@@ -16,6 +16,7 @@ import static org.openea.eap.framework.common.exception.util.ServiceExceptionUti
  *
  * 另外，jobHandlerName 对应到 Spring Bean 的名字，直接调用
  *
+ * @author 芋道源码
  */
 public class SchedulerManager {
 
@@ -116,11 +117,11 @@ public class SchedulerManager {
     public void triggerJob(Long jobId, String jobHandlerName, String jobHandlerParam)
             throws SchedulerException {
         validateScheduler();
+        // 触发任务
         JobDataMap data = new JobDataMap(); // 无需重试，所以不设置 retryCount 和 retryInterval
         data.put(JobDataKeyEnum.JOB_ID.name(), jobId);
         data.put(JobDataKeyEnum.JOB_HANDLER_NAME.name(), jobHandlerName);
         data.put(JobDataKeyEnum.JOB_HANDLER_PARAM.name(), jobHandlerParam);
-        // 触发任务
         scheduler.triggerJob(new JobKey(jobHandlerName), data);
     }
 
@@ -141,6 +142,5 @@ public class SchedulerManager {
                     "[定时任务 - 已禁用][参考 https://doc.iocoder.cn/job/ 开启]");
         }
     }
-
 
 }
