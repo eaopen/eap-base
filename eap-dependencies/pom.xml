@@ -14,10 +14,10 @@
     <url>https://github.com/YunaiV/ruoyi-vue-pro</url>
 
     <properties>
-        <revision>2.0.0-jdk8-snapshot</revision>
+        <revision>2.5.0-SNAPSHOT</revision>
         <flatten-maven-plugin.version>1.5.0</flatten-maven-plugin.version>
         <!-- 统一依赖管理 -->
-        <spring.boot.version>2.7.17</spring.boot.version>
+        <spring.boot.version>2.7.18</spring.boot.version>
         <!-- Web 相关 -->
         <springdoc.version>1.6.15</springdoc.version>
         <knife4j.version>4.3.0</knife4j.version>
@@ -102,6 +102,11 @@
             <dependency>
                 <groupId>io.github.eaopen</groupId>
                 <artifactId>eap-spring-boot-starter-biz-dict</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.eaopen</groupId>
+                <artifactId>eap-spring-boot-starter-biz-i18n</artifactId>
                 <version>${revision}</version>
             </dependency>
             <dependency>
@@ -646,6 +651,14 @@
                 <groupId>com.bstek.ureport</groupId>
                 <artifactId>ureport2-console</artifactId>
                 <version>${ureport2.version}</version>
+            </dependency>
+
+
+            <!-- fix classgraph NoSuchMethodError -->
+            <dependency>
+                <groupId>io.github.classgraph</groupId>
+                <artifactId>classgraph</artifactId>
+                <version>4.8.139</version>
             </dependency>
 
         </dependencies>
