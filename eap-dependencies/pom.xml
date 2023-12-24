@@ -83,6 +83,7 @@
         <!-- 三方云服务相关 -->
         <okio.version>3.5.0</okio.version>
         <okhttp3.version>4.11.0</okhttp3.version>
+        <commons-io.version>2.11.0</commons-io.version>
         <minio.version>8.5.6</minio.version>
         <aliyun-java-sdk-core.version>4.6.4</aliyun-java-sdk-core.version>
         <aliyun-java-sdk-dysmsapi.version>2.2.1</aliyun-java-sdk-dysmsapi.version>
@@ -627,7 +628,6 @@
                 <artifactId>poi-ooxml-schemas</artifactId>
                 <version>${poi.version}</version>
             </dependency>
-
             <dependency>
                 <groupId>org.apache.tika</groupId>
                 <artifactId>tika-core</artifactId> <!-- 文件类型的识别 -->
@@ -981,6 +981,46 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-deploy-plugin</artifactId>
                 <version>2.8.2</version>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.6.8</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>ossrh</serverId>
+                    <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.6</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                        <configuration>
+                            <keyname>CFE1227A</keyname>
+                            <passphraseServerId>CFE1227A</passphraseServerId>
+                            <gpgArguments>
+                                <arg>--pinentry-mode</arg>
+                                <arg>loopback</arg>
+                            </gpgArguments>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
                 <configuration>
                     <skip>true</skip>
                 </configuration>
