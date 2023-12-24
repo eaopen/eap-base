@@ -11,7 +11,6 @@ import java.lang.reflect.Field;
 /**
  * RabbitMQ 消息队列配置类
  *
- * @author 芋道源码
  */
 @AutoConfiguration
 @Slf4j

@@ -16,7 +16,6 @@ import static org.openea.eap.framework.file.core.client.s3.S3FileClientConfig.EN
  * <p>
  * S3 协议的客户端，采用亚马逊提供的 software.amazon.awssdk.s3 库
  *
- * @author 芋道源码
  */
 public class S3FileClient extends AbstractFileClient<S3FileClientConfig> {
 

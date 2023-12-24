@@ -3,7 +3,6 @@ package org.openea.eap.framework.file.core.client.db;
 /**
  * 文件内容 Framework DAO 接口
  *
- * @author 芋道源码
  */
 public interface DBFileContentFrameworkDAO {
 

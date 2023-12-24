@@ -5,7 +5,6 @@ import org.openea.eap.framework.common.pojo.PageParam;
 /**
  * {@link org.openea.eap.framework.common.pojo.PageParam} 工具类
  *
- * @author 芋道源码
  */
 public class PageUtils {
 

@@ -14,7 +14,6 @@ import java.io.File;
 /**
  * 文件工具类
  *
- * @author 芋道源码
  */
 public class FileUtils {
 

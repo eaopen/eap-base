@@ -3,7 +3,6 @@ package org.openea.eap.framework.captcha.core.enums;
 /**
  * 验证码 Redis Key 枚举类
  *
- * @author 芋道源码
  */
 public interface CaptchaRedisKeyConstants {
 

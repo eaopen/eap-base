@@ -7,7 +7,6 @@ import org.openea.eap.framework.common.exception.ErrorCode;
  *
  * 短信框架，使用 2-001-000-000 段
  *
- * @author 芋道源码
  */
 public interface SmsFrameworkErrorCodeConstants {
 

@@ -3,7 +3,6 @@ package org.openea.eap.framework.lock4j.core;
 /**
  * Lock4j Redis Key 枚举类
  *
- * @author 芋道源码
  */
 public interface Lock4jRedisKeyConstants {
 

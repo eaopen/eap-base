@@ -3,7 +3,6 @@ package org.openea.eap.framework.file.core.client;
 /**
  * 文件客户端
  *
- * @author 芋道源码
  */
 public interface FileClient {
 

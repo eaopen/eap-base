@@ -13,7 +13,6 @@ import static org.openea.eap.framework.common.util.collection.CollectionUtils.co
 /**
  * Array 工具类
  *
- * @author 芋道源码
  */
 public class ArrayUtils {
 
