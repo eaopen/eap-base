@@ -218,6 +218,24 @@
                 <version>${revision}</version>
             </dependency>
 
+            <!-- ==eap 扩展模块== -->
+
+            <!-- 集成平台内IM消息 -->
+            <dependency>
+                <groupId>io.github.eaopen</groupId>
+                <artifactId>eap-extj-message-rest</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <!-- 集成Obpm代理模块 -->
+            <dependency>
+                <groupId>io.github.eaopen</groupId>
+                <artifactId>eap-integration-obpm</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <!-- ==eap 扩展模块== -->
+
             <dependency>
                 <groupId>com.github.xiaoymin</groupId>
                 <artifactId>knife4j-openapi3-spring-boot-starter</artifactId>
