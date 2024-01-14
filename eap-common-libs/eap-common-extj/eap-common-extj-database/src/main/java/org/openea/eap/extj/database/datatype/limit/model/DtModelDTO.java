@@ -13,7 +13,7 @@ import lombok.experimental.Accessors;
 /**
  * 前端数据类型模型
  *
- * 
+ *
  */
 @Data
 @Accessors(chain = true)
@@ -87,6 +87,9 @@ public class DtModelDTO extends DtModelBase {
         this.dtEnum = dtEnum;
         this.numPrecision = numPrecision;
         this.numScale = numScale;
+        if(dtEnum==null){
+            return;
+        }
         if (dtEnum.getCharLengthLm() != null) {
             this.charLength = charLength;
         } else if(dtEnum.getBitLengthLm() != null){

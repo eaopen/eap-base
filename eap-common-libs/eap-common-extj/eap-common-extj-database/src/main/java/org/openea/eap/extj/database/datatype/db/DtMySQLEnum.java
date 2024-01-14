@@ -1,18 +1,16 @@
 package org.openea.eap.extj.database.datatype.db;
 
 
-import org.openea.eap.extj.database.datatype.db.interfaces.DtInterface;
-import org.openea.eap.extj.database.datatype.db.interfaces.DtLimitBase;
-import org.openea.eap.extj.database.datatype.limit.*;
-import org.openea.eap.extj.database.datatype.limit.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import org.openea.eap.extj.database.datatype.db.interfaces.DtInterface;
+import org.openea.eap.extj.database.datatype.db.interfaces.DtLimitBase;
 import org.openea.eap.extj.database.datatype.limit.*;
 
 /**
  * MySQL字段数据类型枚举
  *
- * 
+ *
  */
 @Getter
 @AllArgsConstructor
@@ -102,6 +100,7 @@ public enum DtMySQLEnum implements DtInterface {
     /* ======= 集合类型: ======= */
     /* ======= 二进制字符串类型: ======= */
     /* ======= JSON类型: ======= */
+    JSON        ("json",        new JsonLimit()),
     /* ======= 空间数据类型: ======= */
     ;
     /**

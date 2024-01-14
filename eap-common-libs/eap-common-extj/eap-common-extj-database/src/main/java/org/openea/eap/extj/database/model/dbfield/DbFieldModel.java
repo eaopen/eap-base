@@ -70,7 +70,9 @@ public class DbFieldModel extends DbFieldModelBase implements JdbcGetMod {
         try{
             DbTypeUtil.getEncodeDb(dbEncode).setPartFieldModel(this, result);
             this.dtModelDTO.setConvertType(DtModelDTO.DB_VAL).setConvertTargetDtEnum(this.dtModelDTO.getDtEnum());
-            this.setLength(this.dtModelDTO.convert().getFormatLengthStr());
+            if(this.dtModelDTO.getDtEnum()!=null){
+                this.setLength(this.dtModelDTO.convert().getFormatLengthStr());
+            }
         }catch (Exception e){
             e.printStackTrace();
         }
