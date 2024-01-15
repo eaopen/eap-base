@@ -205,6 +205,7 @@ public abstract class DbBase {
         public static String getDbBaseConnUrl(DbSourceOrDbLink dbSourceOrDbLink, String dbName){
             DbLinkEntity dsd = dbSourceOrDbLink.init(dbName);
             try {
+                // todo fix can't get correct url
                 DbBase db = DbTypeUtil.getDb(dbSourceOrDbLink);
                 if(dbName!=null){
                     return db.getConnUrl(dsd.getPrepareUrl(), dsd.getHost(), dsd.getPort(), dsd.getDbStruct());
