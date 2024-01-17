@@ -90,14 +90,16 @@
             <url>https://maven.aliyun.com/repository/public</url>
         </repository>
         <repository>
-            <id>github-mvn-openea</id>
-            <name>github-openea</name>
-            <url>https://maven.pkg.github.com/eaopen/mvn-repo</url>
-        </repository>
-        <repository>
             <id>openea-reps-mvn</id>
             <name>mvn</name>
             <url>https://openea-maven.pkg.coding.net/repository/reps/mvn/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
         </repository>
     </repositories>
     <pluginRepositories>
