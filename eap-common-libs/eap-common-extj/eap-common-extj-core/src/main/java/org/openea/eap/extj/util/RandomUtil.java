@@ -6,6 +6,7 @@ import org.openea.eap.extj.util.context.SpringContext;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.support.atomic.RedisAtomicLong;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
@@ -22,7 +23,9 @@ public class RandomUtil {
 
     private static final String ID_IDX = CacheKeyUtil.IDGENERATOR + "Index:";
     private RedisTemplate<String, Long> redisTemplate;
-    @Autowired
+
+    @Autowired(required = false)
+    @Lazy  //避免循环依赖
     private ThreadPoolTaskExecutor threadPoolTaskExecutor;
 
     //ID缓存有效时间 定时刷新有效期
