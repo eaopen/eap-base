@@ -29,7 +29,6 @@
     </properties>
 
     <modules>
-<!--        <module>eap-dependencies</module>-->
         <module>eap-common-libs</module>
         <module>eap-framework</module>
     </modules>

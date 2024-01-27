@@ -147,27 +147,12 @@
             </dependency>
             <dependency>
                 <groupId>io.github.eaopen</groupId>
-                <artifactId>eap-spring-boot-starter-biz-sms</artifactId>
-                <version>${revision}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.github.eaopen</groupId>
-                <artifactId>eap-spring-boot-starter-biz-pay</artifactId>
-                <version>${revision}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.github.eaopen</groupId>
                 <artifactId>eap-spring-boot-starter-biz-tenant</artifactId>
                 <version>${revision}</version>
             </dependency>
             <dependency>
                 <groupId>io.github.eaopen</groupId>
                 <artifactId>eap-spring-boot-starter-biz-data-permission</artifactId>
-                <version>${revision}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.github.eaopen</groupId>
-                <artifactId>eap-spring-boot-starter-biz-social</artifactId>
                 <version>${revision}</version>
             </dependency>
             <dependency>
@@ -190,6 +175,31 @@
                 <artifactId>eap-spring-boot-starter-desensitize</artifactId>
                 <version>${revision}</version>
             </dependency>
+
+
+            <dependency>
+                <groupId>io.github.eaopen</groupId>
+                <artifactId>eap-spring-boot-starter-biz-social</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.eaopen</groupId>
+                <artifactId>eap-spring-boot-starter-biz-sms</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.eaopen</groupId>
+                <artifactId>eap-spring-boot-starter-biz-file</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.github.eaopen</groupId>
+                <artifactId>eap-spring-boot-starter-biz-pay</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+
 
             <!-- Spring 核心 -->
             <dependency>
@@ -231,6 +241,20 @@
             <dependency>
                 <groupId>io.github.eaopen</groupId>
                 <artifactId>eap-integration-obpm</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <!-- 工作流BPM(flowable) -->
+            <dependency>
+                <groupId>io.github.eaopen</groupId>
+                <artifactId>eap-module-bpm-biz</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <!-- 报表Report(jimuReport) -->
+            <dependency>
+                <groupId>io.github.eaopen</groupId>
+                <artifactId>eap-module-report-biz</artifactId>
                 <version>${revision}</version>
             </dependency>
 
@@ -911,7 +935,6 @@
                 <artifactId>ureport2-console</artifactId>
                 <version>${ureport2.version}</version>
             </dependency>
-
 
             <dependency>
                 <groupId>org.dom4j</groupId>
